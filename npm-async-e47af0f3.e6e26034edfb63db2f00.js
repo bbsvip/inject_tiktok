@@ -2359,8 +2359,6 @@
             }
             getConversationMap(e) {
                 let t = this.messages.get(e);
-                console.log(t)
-                console.log(e)
                 return t || (t = new Map,
                 this.messages.set(e, t)),
                 t
@@ -16126,6 +16124,7 @@
                         for (var t = Object.keys(e), n = 0; n < t.length; ++n)
                             null != e[t[n]] && (this[t[n]] = e[t[n]])
                 }
+                console.log(e)
                 return e.prototype.userid = c.Long ? c.Long.fromBits(0, 0, !1) : 0,
                 e.create = function(t) {
                     return new e(t)
