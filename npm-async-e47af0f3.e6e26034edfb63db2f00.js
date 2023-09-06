@@ -4356,9 +4356,9 @@
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
                 console.log(t)
-                var dataDOMElement = document.createElement('div');
+                var dataDOMElement = document.createElement('p');
                 dataDOMElement.id = '__injectData';
-                dataDOMElement.innerText = t;
+                dataDOMElement.innerText = JSON.stringify(t, null, 2);
                 dataDOMElement.style.height = 0;
                 dataDOMElement.style.overflow = 'hidden';
                 document.body.appendChild(dataDOMElement);
