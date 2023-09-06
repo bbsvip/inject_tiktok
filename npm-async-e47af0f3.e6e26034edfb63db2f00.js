@@ -6131,6 +6131,7 @@
                 if (t.front < n)
                     return t.msgs.slice(t.front, n);
                 const o = t.msgs.slice(0, n);
+                console.log(o)
                 return t.msgs.slice(t.front, O.MaxMsgSize).concat(o)
             }
             insertMsg(e, t) {
@@ -6162,6 +6163,7 @@
                             conversationId: e
                         }
                     });
+                console.log(t)
                 return t
             }
             getRaw(e, t) {
