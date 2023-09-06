@@ -14799,7 +14799,6 @@
                             break;
                         case 2006:
                             o.get_conversation_list_body = l.im_proto.GetUserConversationListResponseBody.decode(e, e.uint32());
-                            console.log(o.get_conversation_list_body)
                             break;
                         case 2007:
                             o.broadcast_send_message_body = l.im_proto.BroadcastSendMessageResponseBody.decode(e, e.uint32());
@@ -16085,6 +16084,7 @@
                 }
                 ,
                 e.encode = function(e, t) {
+                    console.log(e)
                     return t || (t = a.create()),
                     null != e.nick_name && Object.hasOwnProperty.call(e, "nick_name") && t.uint32(10).string(e.nick_name),
                     null != e.protrait && Object.hasOwnProperty.call(e, "protrait") && t.uint32(18).string(e.protrait),
