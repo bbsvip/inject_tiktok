@@ -1833,6 +1833,7 @@
                     _.Y.ctxDebug(this.ctx, "create local conv:", i),
                     this.upsert(r)
                 }
+                console.log(r)
                 return r
             }
             upsert(e) {
