@@ -858,6 +858,7 @@
                             msg_limit: e.msgLimit
                         }
                     });
+                    console.log(t)
                     return this.sendWithRawBody(t, c.m.IMCMD.GET_MESSAGES_BY_USER_INIT_V2, {
                         inboxType: e.inboxType,
                         forceHttp: !0,
@@ -877,7 +878,6 @@
                             msg_limit: e.msgLimit
                         }
                     });
-                    console.log(t)
                     return this.sendWithRawBody(t, c.m.IMCMD.GET_MESSAGE_BY_INIT, {
                         inboxType: e.inboxType,
                         forceHttp: !0,
