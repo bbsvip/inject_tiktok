@@ -2002,10 +2002,6 @@
                 return this.conversations.get(e)
             }
             getConversationArray(e=se.conversationFilter) {
-                console.log(Array.from(this.conversations.values()).filter(e).map((e=>({
-                    conv: e,
-                    rankScore: e.rankScore
-                }))).sort(se.conversationComparator).map((e=>e.conv)))
                 return Array.from(this.conversations.values()).filter(e).map((e=>({
                     conv: e,
                     rankScore: e.rankScore
@@ -2395,6 +2391,8 @@
                         n && !e.indexInConversation.lt(n) || i.set(e.conversationShortId, e),
                         yield this.processNewMessage(e, t)
                     }
+                    console.log(o)
+                    console.log(i)
                     return {
                         msgs: o,
                         conMap: i
