@@ -2985,6 +2985,7 @@
                             page: v,
                             version: e.version
                         })
+                        console.log(t)
                           , n = null === (r = t.body) || void 0 === r ? void 0 : r.message_by_init;
                         y = null === (i = n.messages) || void 0 === i ? void 0 : i.map((e=>e.conversations)),
                         h = [],
@@ -3001,6 +3002,7 @@
                             convLimit: e.convLimit,
                             msgLimit: e.msgLimit
                         })
+                        console.log(t)
                           , n = null === (l = t.body) || void 0 === l ? void 0 : l.messages_per_user_init_v2_body;
                         y = n.conversations,
                         h = n.messages,
