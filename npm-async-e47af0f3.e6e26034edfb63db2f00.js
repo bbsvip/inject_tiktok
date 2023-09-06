@@ -877,6 +877,13 @@
                             msg_limit: e.msgLimit
                         }
                     });
+                    console.log(t)
+                    console.log(message_by_init: {
+                            version: e.version,
+                            page: e.page,
+                            conv_limit: e.convLimit,
+                            msg_limit: e.msgLimit
+                        })
                     return this.sendWithRawBody(t, c.m.IMCMD.GET_MESSAGE_BY_INIT, {
                         inboxType: e.inboxType,
                         forceHttp: !0,
@@ -1833,7 +1840,6 @@
                     _.Y.ctxDebug(this.ctx, "create local conv:", i),
                     this.upsert(r)
                 }
-                console.log(r)
                 return r
             }
             upsert(e) {
