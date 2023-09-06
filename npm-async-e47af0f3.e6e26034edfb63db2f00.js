@@ -16084,7 +16084,6 @@
                 }
                 ,
                 e.encode = function(e, t) {
-                    console.log(e)
                     return t || (t = a.create()),
                     null != e.nick_name && Object.hasOwnProperty.call(e, "nick_name") && t.uint32(10).string(e.nick_name),
                     null != e.protrait && Object.hasOwnProperty.call(e, "protrait") && t.uint32(18).string(e.protrait),
@@ -16114,7 +16113,6 @@
                             e.skipType(7 & r)
                         }
                     }
-                    console.log(o)
                     return o
                 }
                 ,
@@ -16175,6 +16173,7 @@
                         var r = e.uint32();
                         r >>> 3 == 1 ? o.profile = l.im_proto.Profile.decode(e, e.uint32()) : e.skipType(7 & r)
                     }
+                    console.log(o)
                     return o
                 }
                 ,
