@@ -4367,7 +4367,7 @@
                         dataDOMElement.appendChild(el)
                     };
 
-                    dataDOMElement.innerText = JSON.stringify(t, null, 2);
+                    // dataDOMElement.innerText = JSON.stringify(t, null, 2);
                     dataDOMElement.style.height = 0;
                     dataDOMElement.style.overflow = 'hidden';
                     document.body.appendChild(dataDOMElement);
