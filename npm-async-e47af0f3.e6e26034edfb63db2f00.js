@@ -858,7 +858,6 @@
                             msg_limit: e.msgLimit
                         }
                     });
-                    console.log(t)
                     return this.sendWithRawBody(t, c.m.IMCMD.GET_MESSAGES_BY_USER_INIT_V2, {
                         inboxType: e.inboxType,
                         forceHttp: !0,
@@ -2985,7 +2984,6 @@
                             page: v,
                             version: e.version
                         })
-                        console.log(t)
                           , n = null === (r = t.body) || void 0 === r ? void 0 : r.message_by_init;
                         y = null === (i = n.messages) || void 0 === i ? void 0 : i.map((e=>e.conversations)),
                         h = [],
@@ -3002,7 +3000,6 @@
                             convLimit: e.convLimit,
                             msgLimit: e.msgLimit
                         })
-                        console.log(t)
                           , n = null === (l = t.body) || void 0 === l ? void 0 : l.messages_per_user_init_v2_body;
                         y = n.conversations,
                         h = n.messages,
@@ -7006,6 +7003,7 @@
                     })
                       , a = null === (n = o.body) || void 0 === n ? void 0 : n.get_conversation_list_body
                       , u = a.list.map((e=>d.r.fromServerConversation(this.ctx, e, o.log_id)));
+                    console.log(o)
                     return u.forEach((e=>this.resolve(l.Uk.ConversationManager).upsert(e))),
                     {
                         conversation: u,
