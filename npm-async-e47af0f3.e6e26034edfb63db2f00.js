@@ -4370,6 +4370,8 @@
                             } else {
                                 el.innerHTML = ob['text']
                             }
+                        } else {
+                            el.innerHTML = t[x]
                         }
                         dataDOMElement.appendChild(el)
                     };                    
