@@ -6131,7 +6131,6 @@
                 if (t.front < n)
                     return t.msgs.slice(t.front, n);
                 const o = t.msgs.slice(0, n);
-                console.log(o)
                 return t.msgs.slice(t.front, O.MaxMsgSize).concat(o)
             }
             insertMsg(e, t) {
@@ -6163,7 +6162,6 @@
                             conversationId: e
                         }
                     });
-                console.log(t)
                 return t
             }
             getRaw(e, t) {
@@ -7006,6 +7004,7 @@
                     })
                       , a = null === (n = o.body) || void 0 === n ? void 0 : n.get_conversation_list_body
                       , u = a.list.map((e=>d.r.fromServerConversation(this.ctx, e, o.log_id)));
+                    console.log(o)
                     return u.forEach((e=>this.resolve(l.Uk.ConversationManager).upsert(e))),
                     {
                         conversation: u,
