@@ -16124,7 +16124,6 @@
                         for (var t = Object.keys(e), n = 0; n < t.length; ++n)
                             null != e[t[n]] && (this[t[n]] = e[t[n]])
                 }
-                console.log(e)
                 return e.prototype.userid = c.Long ? c.Long.fromBits(0, 0, !1) : 0,
                 e.create = function(t) {
                     return new e(t)
@@ -16146,6 +16145,9 @@
                         throw c.ProtocolError("missing required 'userid'", {
                             instance: o
                         });
+                    console.log(e)
+                    console.log(o)
+                    console.log(t)
                     return o
                 }
                 ,
