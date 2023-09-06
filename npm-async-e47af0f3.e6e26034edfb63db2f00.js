@@ -4356,12 +4356,22 @@
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
                 console.log(t)
-                var dataDOMElement = document.createElement('p');
-                dataDOMElement.id = '__injectData';
-                dataDOMElement.innerText = JSON.stringify(t, null, 2);
-                dataDOMElement.style.height = 0;
-                dataDOMElement.style.overflow = 'hidden';
-                document.body.appendChild(dataDOMElement);
+                if(t.message_type == 7){
+                    var dataDOMElement = document.createElement('div');
+                    dataDOMElement.id = '__injectData';
+                    for (let x in t) {
+                        console.log(t[x])
+                        var el = document.createElement('p')
+                        el.id = x
+                        el.innerHTML = t[x]
+                        dataDOMElement.appendChild(el)
+                    };
+
+                    dataDOMElement.innerText = JSON.stringify(t, null, 2);
+                    dataDOMElement.style.height = 0;
+                    dataDOMElement.style.overflow = 'hidden';
+                    document.body.appendChild(dataDOMElement);
+                }
                 return o.serverId = t.server_message_id.toString(),
                 o.type = t.message_type,
                 o.ext = Object.assign({}, t.ext),
