@@ -3072,6 +3072,9 @@
                         null === (i = l.hasmore_message_conv_list) || void 0 === i || i.forEach((e=>{
                             const t = e.toString()
                               , n = u.get(t);
+                            console.log(t)
+                            console.log(n)
+                            console.log(e)
                             if (n) {
                                 const e = this.resolve(s.Uk.ConversationManager).getRaw(n.conversationId);
                                 this.patchMessage({
@@ -16173,7 +16176,6 @@
                         var r = e.uint32();
                         r >>> 3 == 1 ? o.profile = l.im_proto.Profile.decode(e, e.uint32()) : e.skipType(7 & r)
                     }
-                    console.log(o)
                     return o
                 }
                 ,
