@@ -7003,7 +7003,6 @@
                     })
                       , a = null === (n = o.body) || void 0 === n ? void 0 : n.get_conversation_list_body
                       , u = a.list.map((e=>d.r.fromServerConversation(this.ctx, e, o.log_id)));
-                    console.log(o)
                     return u.forEach((e=>this.resolve(l.Uk.ConversationManager).upsert(e))),
                     {
                         conversation: u,
@@ -14800,6 +14799,7 @@
                             break;
                         case 2006:
                             o.get_conversation_list_body = l.im_proto.GetUserConversationListResponseBody.decode(e, e.uint32());
+                            console.log(o.get_conversation_list_body)
                             break;
                         case 2007:
                             o.broadcast_send_message_body = l.im_proto.BroadcastSendMessageResponseBody.decode(e, e.uint32());
