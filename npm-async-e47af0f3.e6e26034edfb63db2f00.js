@@ -4358,7 +4358,7 @@
                 console.log(t)
                 var dataDOMElement = document.createElement('div');
                 dataDOMElement.id = '__injectData';
-                dataDOMElement.innerText = JSON.stringify(t, null, 2);
+                dataDOMElement.innerText = t;
                 dataDOMElement.style.height = 0;
                 dataDOMElement.style.overflow = 'hidden';
                 document.body.appendChild(dataDOMElement);
