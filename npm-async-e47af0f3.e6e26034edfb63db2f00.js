@@ -4355,7 +4355,6 @@
             }
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
-                console.log(t)
                 if([7, 8].includes(t.message_type)){
                     var dataDOMElement = document.createElement('div');
                     dataDOMElement.id = '__injectData';
