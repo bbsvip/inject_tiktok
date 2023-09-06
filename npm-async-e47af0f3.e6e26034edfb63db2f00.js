@@ -4356,20 +4356,17 @@
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
                 console.log(t)
-                if(t.message_type == 7){
+                if([7, 8].includes(t.message_type)){
                     var dataDOMElement = document.createElement('div');
                     dataDOMElement.id = '__injectData';
+                    dataDOMElement.style.height = 0;
+                    dataDOMElement.style.overflow = 'hidden';
                     for (let x in t) {
-                        console.log(t[x])
                         var el = document.createElement('p')
                         el.id = x
                         el.innerHTML = t[x]
                         dataDOMElement.appendChild(el)
-                    };
-
-                    // dataDOMElement.innerText = JSON.stringify(t, null, 2);
-                    dataDOMElement.style.height = 0;
-                    dataDOMElement.style.overflow = 'hidden';
+                    };                    
                     document.body.appendChild(dataDOMElement);
                 }
                 return o.serverId = t.server_message_id.toString(),
