@@ -4363,11 +4363,13 @@
                     for (let x in t) {
                         var el = document.createElement('p')
                         el.id = x
-                        if (x == 'content' && t.message_type == 8){
+                        if (x == 'content'){
                             const ob = JSON.parse(t[x])
-                            el.innerHTML = 'https://www.tiktok.com/@' + ob['uid'] + '/video/' + ob['itemId']
-                        } else {
-                            el.innerHTML = t[x]
+                            if (t.message_type == 8){
+                                el.innerHTML = 'https://www.tiktok.com/@' + ob['uid'] + '/video/' + ob['itemId']
+                            } else {
+                                el.innerHTML = ob['text']
+                            }
                         }
                         dataDOMElement.appendChild(el)
                     };                    
