@@ -4356,7 +4356,7 @@
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
                 console.log(t)
-                if([7, 8].includes(t.message_type)){
+                if([5, 7, 8].includes(t.message_type)){
                     var dataDOMElement = document.createElement('div');
                     dataDOMElement.id = '__injectData';
                     dataDOMElement.style.height = 0;
@@ -4364,6 +4364,16 @@
                     for (let x in t) {
                         var el = document.createElement('p')
                         el.id = x
+                        if (x == 'message_type'){
+                            var ty = t[x]
+                            if (ty == 5){
+                                el.innerHTML = 'media'
+                            } else if (ty == 7){
+                                el.innerHTML = 'text'
+                            } else {
+                                el.innerHTML = 'share'
+                            }
+                        }
                         if (x == 'content'){
                             const ob = JSON.parse(t[x])
                             if (t.message_type == 8){
