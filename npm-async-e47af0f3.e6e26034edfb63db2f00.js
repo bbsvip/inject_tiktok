@@ -2359,6 +2359,8 @@
             }
             getConversationMap(e) {
                 let t = this.messages.get(e);
+                console.log(t)
+                console.log(e)
                 return t || (t = new Map,
                 this.messages.set(e, t)),
                 t
