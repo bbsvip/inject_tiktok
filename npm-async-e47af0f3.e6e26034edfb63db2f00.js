@@ -4717,7 +4717,7 @@
                         access: s.HF.requestAccessName
                     });
 //                    console.log(t)
-                    console.log(this.ctx)
+//                    console.log(this.ctx)
                     for (const e of this.ctx.plugin)
                         t = yield e.sendPacket(t);
                     this.request = t
@@ -5026,6 +5026,7 @@
             sendPacket(e) {
                 return (0,
                 o.__awaiter)(this, void 0, void 0, (function*() {
+                    console.log(e)
                     return e
                 }
                 ))
