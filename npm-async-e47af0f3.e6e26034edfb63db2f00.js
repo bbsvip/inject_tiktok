@@ -2359,8 +2359,6 @@
             }
             getConversationMap(e) {
                 let t = this.messages.get(e);
-                console.log(t)
-                console.log(e)
                 return t || (t = new Map,
                 this.messages.set(e, t)),
                 t
@@ -3333,6 +3331,7 @@
                     let t = null;
                     if (void 0 !== e.shortId) {
                         const t = this.resolve(s.Uk.ConversationManager).getWithShortIdRaw(e.shortId);
+                        console.log(t)
                         if (null !== t && !t.isOffline)
                             return t
                     }
@@ -3388,6 +3387,7 @@
                             reachServer: !1,
                             sender: this
                         });
+                    console.log(t)
                     return yield this.getMessagesByConversation({
                         conversation: t
                     }),
