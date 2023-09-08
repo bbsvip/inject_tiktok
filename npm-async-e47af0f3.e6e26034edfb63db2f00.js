@@ -3331,7 +3331,6 @@
                     let t = null;
                     if (void 0 !== e.shortId) {
                         const t = this.resolve(s.Uk.ConversationManager).getWithShortIdRaw(e.shortId);
-                        console.log(t)
                         if (null !== t && !t.isOffline)
                             return t
                     }
@@ -3387,7 +3386,6 @@
                             reachServer: !1,
                             sender: this
                         });
-                    console.log(t)
                     return yield this.getMessagesByConversation({
                         conversation: t
                     }),
@@ -4762,6 +4760,7 @@
                         this.ctx.option.webSocketLevel === i._.PushOnly && (n.forceHttp = !0),
                         this.ctx.option.webSocketLevel === i._.All && (n.forceHttp = !1),
                         q = new l.F(this.ctx,t,e),
+                        console.log(q)
                         yield q.prepareRequest(n.inboxType),
                         yield this.resolve(d.Uk.NetworkManager).send(q, {
                             maxHttpRetryTimes: !0 === n.forceHttp ? n.maxRetryTimes : void 0,
@@ -4771,7 +4770,7 @@
                         n.useBeacon || void 0 === q.response)
                             return r.m.Response.create({});
                         const R = q.response;
-                        // console.log(R)
+                        console.log(R)
                         if (0 !== R.status_code) {
                             const l = R.status_code;
                             switch (l) {
