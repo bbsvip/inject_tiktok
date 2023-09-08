@@ -7505,6 +7505,7 @@
                     if (e.message.isRootReference)
                         o = e.message;
                     else {
+                        console.log(this.resolve)
                         const r = this.resolve(l.Uk.ConversationManager).get(e.message.conversationId)
                           , i = null === (n = null === (t = e.message.referenceInfo) || void 0 === t ? void 0 : t.root_message_id) || void 0 === n ? void 0 : n.toString();
                         if (void 0 === i)
@@ -13921,9 +13922,6 @@
                             break;
                         case 203:
                             o.messages_per_user_init_v2_body = l.im_proto.MessagesPerUserInitV2RequestBody.decode(e, e.uint32());
-                            console.log(o)
-                            console.log(l.im_proto.MessagesPerUserInitV2RequestBody.decode(e, e.uint32()))
-                            
                             break;
                         case 211:
                             o.get_message_by_id_body = l.im_proto.GetMessageByIdRequestBody.decode(e, e.uint32());
