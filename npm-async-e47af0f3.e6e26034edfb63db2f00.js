@@ -4716,11 +4716,13 @@
                         biz: this.ctx.option.biz,
                         access: s.HF.requestAccessName
                     });
-                    console.log(t)
+//                    console.log(t)
+                    console.log(this.ctx)
                     for (const e of this.ctx.plugin)
                         t = yield e.sendPacket(t);
+                        console.log(e.sendPacket(t))
                     this.request = t
-                    console.log(t)
+//                    console.log(t)
                     console.log('-------------------')
                 }
                 ))
@@ -4774,11 +4776,11 @@
                         const R = q.response;
 
                         console.log(l.F)
-                        console.log(this.ctx)
-                        console.log(t)
-                        console.log(e)
-                        console.log(q)
-                        console.log(R)
+//                        console.log(this.ctx)
+//                        console.log(t)
+//                        console.log(e)
+//                        console.log(q)
+//                        console.log(R)
                         console.log('==========')
                         if (0 !== R.status_code) {
                             const l = R.status_code;
