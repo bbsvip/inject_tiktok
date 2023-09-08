@@ -5151,6 +5151,7 @@
                 return this.getContext().resolve(e)
             }
             register(e, t) {
+                console.log(this.getContext().register(e, t))
                 return this.getContext().register(e, t)
             }
         }
