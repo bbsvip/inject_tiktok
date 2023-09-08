@@ -4720,7 +4720,6 @@
                     console.log(this.ctx)
                     for (const e of this.ctx.plugin)
                         t = yield e.sendPacket(t);
-                        console.log(e.sendPacket(t))
                     this.request = t
 //                    console.log(t)
                     console.log('-------------------')
