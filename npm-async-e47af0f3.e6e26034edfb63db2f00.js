@@ -5026,7 +5026,6 @@
             sendPacket(e) {
                 return (0,
                 o.__awaiter)(this, void 0, void 0, (function*() {
-                    console.log(e)
                     return e
                 }
                 ))
@@ -5148,6 +5147,7 @@
                 return this.__internal_ctx
             }
             resolve(e) {
+                console.log(this.getContext().resolve(e))
                 return this.getContext().resolve(e)
             }
             register(e, t) {
