@@ -4756,10 +4756,6 @@
                       , D = this.getReqTrackerContext(e);
                     let q;
                     try {
-//                        console.log(e)
-//                        console.log(t)
-//                        console.log(o)
-//                        console.log(D)
                         if (void 0 === n.inboxType && (n.inboxType = this.resolve(d.Uk.InboxType).getDefaultInboxWithoutCheck()),
                         this.ctx.option.webSocketLevel === i._.PushOnly && (n.forceHttp = !0),
                         this.ctx.option.webSocketLevel === i._.All && (n.forceHttp = !1),
@@ -4773,6 +4769,8 @@
                         n.useBeacon || void 0 === q.response)
                             return r.m.Response.create({});
                         const R = q.response;
+                        
+                        console.log(this.ctx)
                         console.log(q)
                         console.log(R)
                         console.log('==========')
