@@ -4760,7 +4760,6 @@
                         this.ctx.option.webSocketLevel === i._.PushOnly && (n.forceHttp = !0),
                         this.ctx.option.webSocketLevel === i._.All && (n.forceHttp = !1),
                         q = new l.F(this.ctx,t,e),
-                        console.log(q)
                         yield q.prepareRequest(n.inboxType),
                         yield this.resolve(d.Uk.NetworkManager).send(q, {
                             maxHttpRetryTimes: !0 === n.forceHttp ? n.maxRetryTimes : void 0,
