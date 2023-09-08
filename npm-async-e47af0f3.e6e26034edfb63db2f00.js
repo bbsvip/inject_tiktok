@@ -4688,8 +4688,6 @@
                 let i = this.ctx.option.apiUrl;
                 i.endsWith("/") || (i += "/"),
                 this.url = i + r
-                console.log(this.url)
-                console.log(l.mA)
             }
             get logid() {
                 var e, t;
@@ -4722,6 +4720,7 @@
                         t = yield e.sendPacket(t);
                     this.request = t
                     console.log(this.request)
+                    console.log('-------------------')
                 }
                 ))
             }
