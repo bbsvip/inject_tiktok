@@ -4716,10 +4716,11 @@
                         biz: this.ctx.option.biz,
                         access: s.HF.requestAccessName
                     });
+                    console.log(t)
                     for (const e of this.ctx.plugin)
                         t = yield e.sendPacket(t);
                     this.request = t
-                    console.log(this.request)
+                    console.log(t)
                     console.log('-------------------')
                 }
                 ))
