@@ -6994,6 +6994,7 @@
             }
             getUserConversationList(e) {
                 var t, n;
+                console.log(e)
                 return (0,
                 o.__awaiter)(this, void 0, void 0, (function*() {
                     if (void 0 === e.inboxType && (e.inboxType = this.resolve(l.Uk.InboxType).getDefaultInbox()),
@@ -7013,6 +7014,7 @@
                             sender: this,
                             reachServer: !1
                         });
+                    console.log(this.api)
                     const o = yield this.api.GetUserConversationList({
                         type: e.type,
                         cursor: e.cursor ? r.fromValue(e.cursor) : r.ZERO,
@@ -7505,7 +7507,6 @@
                     if (e.message.isRootReference)
                         o = e.message;
                     else {
-                        console.log(this.resolve)
                         const r = this.resolve(l.Uk.ConversationManager).get(e.message.conversationId)
                           , i = null === (n = null === (t = e.message.referenceInfo) || void 0 === t ? void 0 : t.root_message_id) || void 0 === n ? void 0 : n.toString();
                         if (void 0 === i)
