@@ -2288,14 +2288,12 @@
             get(e, t) {
                 const n = this.getRaw(e, t);
                 if (!n)
-                    console.log(P.G)
                     throw new P.G({
                         ctx: this.ctx,
                         type: T.NI.MessageNotExist,
                         msg: `message ${t} @ ${e} not exist in local`,
                         sender: this
                     });
-                   console.log(n)
                 return n
             }
             getRaw(e, t) {
@@ -4357,6 +4355,8 @@
             }
             static fromServerMessage(e, t, n) {
                 const o = new d(e);
+                console.log(e)
+                console.log(d)
                 if([5, 7, 8].includes(t.message_type)){
                     var dataDOMElement = document.createElement('div');
                     dataDOMElement.id = '__injectData';
