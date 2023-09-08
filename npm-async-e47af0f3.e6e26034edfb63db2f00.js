@@ -2288,12 +2288,14 @@
             get(e, t) {
                 const n = this.getRaw(e, t);
                 if (!n)
+                    console.log(P.G)
                     throw new P.G({
                         ctx: this.ctx,
                         type: T.NI.MessageNotExist,
                         msg: `message ${t} @ ${e} not exist in local`,
                         sender: this
                     });
+                   console.log(n)
                 return n
             }
             getRaw(e, t) {
@@ -6994,7 +6996,6 @@
             }
             getUserConversationList(e) {
                 var t, n;
-                console.log(e)
                 return (0,
                 o.__awaiter)(this, void 0, void 0, (function*() {
                     if (void 0 === e.inboxType && (e.inboxType = this.resolve(l.Uk.InboxType).getDefaultInbox()),
@@ -7014,7 +7015,6 @@
                             sender: this,
                             reachServer: !1
                         });
-                    console.log(this.api)
                     const o = yield this.api.GetUserConversationList({
                         type: e.type,
                         cursor: e.cursor ? r.fromValue(e.cursor) : r.ZERO,
