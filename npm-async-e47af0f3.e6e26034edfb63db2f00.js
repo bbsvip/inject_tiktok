@@ -4759,6 +4759,9 @@
                         if (void 0 === n.inboxType && (n.inboxType = this.resolve(d.Uk.InboxType).getDefaultInboxWithoutCheck()),
                         this.ctx.option.webSocketLevel === i._.PushOnly && (n.forceHttp = !0),
                         this.ctx.option.webSocketLevel === i._.All && (n.forceHttp = !1),
+                        console.log(this.ctx)
+                        console.log(t)
+                        console.log(e)
                         q = new l.F(this.ctx,t,e),
                         yield q.prepareRequest(n.inboxType),
                         yield this.resolve(d.Uk.NetworkManager).send(q, {
